@@ -1,0 +1,21 @@
+// client/app.js
+document.getElementById('feedbackForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const clientName = document.getElementById('clientName').value;
+    const email = document.getElementById('email').value;
+    const rating = document.getElementById('rating').value;
+    const comments = document.getElementById('comments').value;
+
+    const response = await fetch('/api/feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ clientName, email, rating, comments }),
+    });
+
+    if (response.ok) {
+        alert('Feedback submitted successfully!');
+    } else {
+        alert('Failed to submit feedback.');
+    }
+});
