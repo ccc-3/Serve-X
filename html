@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serve X Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Updated Heading -->
+        <h1 class="feedback-heading">We Value Your Feedback</h1>
+        <form id="feedbackForm">
+            <input type="text" id="clientName" placeholder="Samuel Todd" required><br>
+            <input type="email" id="email" placeholder="ServeX@gmail.com"><br>
+            
+            <div class="rating-container">
+                <label class="rating-label">Rating:</label>
+                <div class="rating-buttons">
+                    <input type="radio" id="rating1" name="rating" value="1">
+                    <label for="rating1" class="rating-circle">1</label>
+
+                    <input type="radio" id="rating2" name="rating" value="2">
+                    <label for="rating2" class="rating-circle">2</label>
+
+                    <input type="radio" id="rating3" name="rating" value="3">
+                    <label for="rating3" class="rating-circle">3</label>
+
+                    <input type="radio" id="rating4" name="rating" value="4">
+                    <label for="rating4" class="rating-circle">4</label>
+
+                    <input type="radio" id="rating5" name="rating" value="5">
+                    <label for="rating5" class="rating-circle">5</label>
+                </div>
+            </div>
+            
+            <textarea id="comments" placeholder="Your Comments or Suggestions" required></textarea><br>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
